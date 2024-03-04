@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>18A391</string>
+	<string>23D56</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>StandaloneFileBrowser</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.gkngkc.sfb</string>
+	<string>jp.curiosity-inc.StandaloneFileBrowser</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -17,30 +17,30 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0		</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
+	<string>1.0</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
-	<key>CSResourcesFileMapped</key>
-	<true/>
+	<string>1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>10A255</string>
+	<string></string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>GM</string>
+	<string>14.2</string>
 	<key>DTSDKBuild</key>
-	<string>18A384</string>
+	<string>23C53</string>
 	<key>DTSDKName</key>
-	<string>macosx10.14</string>
+	<string>macosx14.2</string>
 	<key>DTXcode</key>
-	<string>1000</string>
+	<string>1520</string>
 	<key>DTXcodeBuild</key>
-	<string>10A255</string>
+	<string>15C500b</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.2</string>
 </dict>
 </plist>

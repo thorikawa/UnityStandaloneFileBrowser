@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A3F7F8310AC147200948A73 /* Plugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6A3F7D2310AAFB3D00948A73 /* Plugin.mm */; };
-		DD2760011CA14C26008BCDB8 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD2760001CA14C26008BCDB8 /* AppKit.framework */; };
+		EE854B222B961314007661EB /* Plugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6A3F7D2310AAFB3D00948A73 /* Plugin.mm */; };
+		EE854B232B961358007661EB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD2760001CA14C26008BCDB8 /* AppKit.framework */; };
+		EE854B242B96135A007661EB /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,17 +17,18 @@
 		08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		32BAE0B30371A71500C91783 /* Plugin.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plugin.pch; sourceTree = "<group>"; };
 		6A3F7D2310AAFB3D00948A73 /* Plugin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Plugin.mm; sourceTree = "<group>"; };
-		6A3F7F7E10AC146D00948A73 /* StandaloneFileBrowser.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StandaloneFileBrowser.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D01CCD10486CAD60068D4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DD2760001CA14C26008BCDB8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = ../../../../../../../../../System/Library/Frameworks/AppKit.framework; sourceTree = "<group>"; };
+		EE854B1E2B96111E007661EB /* StandaloneFileBrowser.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StandaloneFileBrowser.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6A3F7F7C10AC146D00948A73 /* Frameworks */ = {
+		EE854B1B2B96111E007661EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD2760011CA14C26008BCDB8 /* AppKit.framework in Frameworks */,
+				EE854B232B961358007661EB /* AppKit.framework in Frameworks */,
+				EE854B242B96135A007661EB /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +76,7 @@
 		19C28FB4FE9D528D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6A3F7F7E10AC146D00948A73 /* StandaloneFileBrowser.bundle */,
+				EE854B1E2B96111E007661EB /* StandaloneFileBrowser.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,21 +84,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6A3F7F7D10AC146D00948A73 /* StandaloneFileBrowser */ = {
+		EE854B1D2B96111E007661EB /* StandaloneFileBrowser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A3F7F8210AC146D00948A73 /* Build configuration list for PBXNativeTarget "StandaloneFileBrowser" */;
+			buildConfigurationList = EE854B1F2B96111E007661EB /* Build configuration list for PBXNativeTarget "StandaloneFileBrowser" */;
 			buildPhases = (
-				6A3F7F7A10AC146D00948A73 /* Resources */,
-				6A3F7F7B10AC146D00948A73 /* Sources */,
-				6A3F7F7C10AC146D00948A73 /* Frameworks */,
+				EE854B1A2B96111E007661EB /* Sources */,
+				EE854B1B2B96111E007661EB /* Frameworks */,
+				EE854B1C2B96111E007661EB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = StandaloneFileBrowser;
-			productName = ASimplePlugin;
-			productReference = 6A3F7F7E10AC146D00948A73 /* StandaloneFileBrowser.bundle */;
+			productName = StandaloneFileBrowser;
+			productReference = EE854B1E2B96111E007661EB /* StandaloneFileBrowser.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -105,12 +107,18 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				TargetAttributes = {
+					EE854B1D2B96111E007661EB = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
 			};
 			buildConfigurationList = 4FADC23708B4156C00ABE55E /* Build configuration list for PBXProject "StandaloneFileBrowser" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -118,13 +126,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6A3F7F7D10AC146D00948A73 /* StandaloneFileBrowser */,
+				EE854B1D2B96111E007661EB /* StandaloneFileBrowser */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6A3F7F7A10AC146D00948A73 /* Resources */ = {
+		EE854B1C2B96111E007661EB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -134,11 +142,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6A3F7F7B10AC146D00948A73 /* Sources */ = {
+		EE854B1A2B96111E007661EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A3F7F8310AC147200948A73 /* Plugin.mm in Sources */,
+				EE854B222B961314007661EB /* Plugin.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,55 +190,144 @@
 			};
 			name = Release;
 		};
-		6A3F7F8010AC146D00948A73 /* Debug */ = {
+		EE854B202B96111E007661EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 67Q3ESB6J9;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Carbon,
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
 				);
-				PREBINDING = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gkngkc.sfb;
-				PRODUCT_NAME = StandaloneFileBrowser;
-				VALID_ARCHS = x86_64;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.curiosity-inc.StandaloneFileBrowser";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
-		6A3F7F8110AC146D00948A73 /* Release */ = {
+		EE854B212B96111E007661EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				COPY_PHASE_STRIP = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Carbon,
-				);
-				PREBINDING = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gkngkc.sfb;
-				PRODUCT_NAME = StandaloneFileBrowser;
-				VALID_ARCHS = x86_64;
+				DEVELOPMENT_TEAM = 67Q3ESB6J9;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.curiosity-inc.StandaloneFileBrowser";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				WRAPPER_EXTENSION = bundle;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -246,11 +343,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A3F7F8210AC146D00948A73 /* Build configuration list for PBXNativeTarget "StandaloneFileBrowser" */ = {
+		EE854B1F2B96111E007661EB /* Build configuration list for PBXNativeTarget "StandaloneFileBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A3F7F8010AC146D00948A73 /* Debug */,
-				6A3F7F8110AC146D00948A73 /* Release */,
+				EE854B202B96111E007661EB /* Debug */,
+				EE854B212B96111E007661EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
